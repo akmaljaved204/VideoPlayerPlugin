@@ -1,4 +1,4 @@
-package org.devgirl.calendar;
+package com.fortsolution.playerplugin;
 
 
 import java.io.IOException;
@@ -31,7 +31,6 @@ public class  ImageZoomActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_main);
 		imageLayout=(RelativeLayout) findViewById(R.id.imageLayout);
 		imageURL=getIntent().getStringExtra("imageUrl");
-		//imageURL="http://images.gnossem.com/components/com_virtuemart/shop_image/product/GNOSSEM-ANTIPODIUMSS14-018(01).jpg";
 		brnCross=(Button) findViewById(R.id.btnCross);
 		brnCross.setOnClickListener(this);
 		loadImageFromURL();
