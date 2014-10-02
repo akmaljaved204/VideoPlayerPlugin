@@ -29,19 +29,20 @@
             <feature name="Calendar">
                 <param name="android-package" value="com.fortsolution.playerplugin.Calendar"/>
             </feature>
+           <!--
             <feature name="Imagezoom">
-                <param name="android-package" value="com.fortsolution.playerplugin.Imagezoom"/>
-            </feature>
+                           <param name="android-package" value="com.fortsolution.playerplugin.Imagezoom"/>
+                       </feature>-->
+           
         </config-file>
         
 
        
-       <!--
          <config-file target="res/xml/config.xml" parent="/*">
                    <feature name="Imagezoom">
                        <param name="android-package" value="com.fortsolution.playerplugin.Imagezoom"/>
                    </feature>
-               </config-file>-->
+               </config-file>
        
 
 	  <source-file src="src/android/Calendar.java" target-dir="src/com/fortsolution/playerplugin" />
