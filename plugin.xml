@@ -3,7 +3,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="com.fortsolution.playerplugin"
       version="0.1.0">
-    <name>Calendar</name>
+    <name>PlayerPlugin</name>
     <description>PhoneGap Player Plugin</description>
     <license>MIT</license>
     <keywords>phonegap,image zoom ,player</keywords>
@@ -12,12 +12,15 @@
     
     <js-module src="www/calendar.js" name="Calendar">
             <clobbers target="window.calendar" />
+            <clobbers target="window.imagezoom" />
        </js-module>
     
 	
+	<!--
 	 <js-module src="www/imagezoom.js" name="Imagezoom">
-        <clobbers target="window.imagezoom" />
-    </js-module>
+			<clobbers target="window.imagezoom" />
+		</js-module>-->
+	
 
     <!-- android -->
     <platform name="android">
@@ -26,15 +29,20 @@
             <feature name="Calendar">
                 <param name="android-package" value="com.fortsolution.playerplugin.Calendar"/>
             </feature>
-        </config-file>
-        
-
-       
-         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="Imagezoom">
                 <param name="android-package" value="com.fortsolution.playerplugin.Imagezoom"/>
             </feature>
         </config-file>
+        
+
+       
+       <!--
+         <config-file target="res/xml/config.xml" parent="/*">
+                   <feature name="Imagezoom">
+                       <param name="android-package" value="com.fortsolution.playerplugin.Imagezoom"/>
+                   </feature>
+               </config-file>-->
+       
 
 	  <source-file src="src/android/Calendar.java" target-dir="src/com/fortsolution/playerplugin" />
 	  <source-file src="src/android/Imagezoom.java" target-dir="src/com/fortsolution/playerplugin" />
