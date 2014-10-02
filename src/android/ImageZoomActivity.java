@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import com.fortsolution.gnossem.R;
+import com.fortsolution.madadd.R;
 
 import android.os.Bundle;
 import android.view.View;
