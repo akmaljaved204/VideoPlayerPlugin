@@ -1,4 +1,4 @@
-package com.fortsolution.playerplugin;
+package org.devgirl.calendar;
  
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
