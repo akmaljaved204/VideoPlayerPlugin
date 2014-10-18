@@ -9,8 +9,8 @@
     <keywords>phonegap,video player</keywords>
 
 
-    <js-module src="www/calendar.js" name="VideoPlayer">
-        <clobbers target="window.calendar" />
+    <js-module src="www/videoplayer.js" name="VideoPlayer">
+        <clobbers target="window.videoplayer" />
     </js-module>
 	
 	 <js-module src="www/imagezoom.js" name="Imagezoom">

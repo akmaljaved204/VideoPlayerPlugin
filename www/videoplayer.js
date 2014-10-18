@@ -1,4 +1,4 @@
-var calendar = {
+var videoplayer = {
     createEvent: function(title, location, notes, startDate, endDate, videoURL,successCallback, errorCallback) {
         cordova.exec(
             successCallback, // success callback function
@@ -17,4 +17,4 @@ var calendar = {
         ); 
     }
 };
-module.exports = calendar;
+module.exports = videoplayer;
