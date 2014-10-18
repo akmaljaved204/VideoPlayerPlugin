@@ -1,4 +1,4 @@
-package org.devgirl.calendar;
+package com.fortsolution.playerplugin;
 
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package org.devgirl.calendar;
+package com.fortsolution.playerplugin;
 
 import android.content.Context;
 import android.graphics.Bitmap;
