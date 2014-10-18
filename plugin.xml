@@ -3,10 +3,10 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="com.fortsolution.playerplugin"
       version="0.1.0">
-    <name>Calendar</name>
+    <name>VideoPlayer</name>
     <description>Sample PhoneGap Calendar Plugin</description>
-    <license>MIT</license>
-    <keywords>phonegap,calendar</keywords>
+    <license>Fortsolution</license>
+    <keywords>phonegap,video player</keywords>
 
 
     <js-module src="www/calendar.js" name="VideoPlayer">
