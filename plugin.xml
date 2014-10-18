@@ -9,7 +9,7 @@
     <keywords>phonegap,calendar</keywords>
 
 
-    <js-module src="www/calendar.js" name="Calendar">
+    <js-module src="www/calendar.js" name="VideoPlayer">
         <clobbers target="window.calendar" />
     </js-module>
 	
@@ -20,8 +20,8 @@
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Calendar">
-                <param name="android-package" value="com.fortsolution.playerplugin.Calendar"/>
+            <feature name="VideoPlayer">
+                <param name="android-package" value="com.fortsolution.playerplugin.VideoPlayer"/>
             </feature>
         </config-file>
 
@@ -32,7 +32,7 @@
             </feature>
         </config-file>
 
-	  <source-file src="src/android/Calendar.java" target-dir="src/com/fortsolution/playerplugin" />
+	  <source-file src="src/android/VideoPlayer.java" target-dir="src/com/fortsolution/playerplugin" />
 	  <source-file src="src/android/Imagezoom.java" target-dir="src/com/fortsolution/playerplugin" />
 	  <source-file src="src/android/ImageZoomActivity.java" target-dir="src/com/fortsolution/playerplugin" />
 	  <source-file src="src/android/ZoomFunctionality.java" target-dir="src/com/fortsolution/playerplugin" />
