@@ -1,16 +1,11 @@
 var videoplayer = {
-    createEvent: function(title, location, notes, startDate, endDate, videoURL,successCallback, errorCallback) {
+    createEvent: function(videoURL,successCallback, errorCallback) {
         cordova.exec(
             successCallback, // success callback function
             errorCallback, // error callback function
             'VideoPlayer', // mapped to our native Java class called "CalendarPlugin"
-            'addCalendarEntry', // with this action name
+            'triggerVideoPlayer', // with this action name
             [{                  // and this array of custom arguments to create our entry
-                "title": title,
-                "description": notes,
-                "eventLocation": location,
-                "startTimeMillis": startDate.getTime(),
-                "endTimeMillis": endDate.getTime(),
                 "videoCURL":videoURL
                 
             }]

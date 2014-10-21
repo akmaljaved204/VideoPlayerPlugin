@@ -11,7 +11,7 @@ import android.content.Intent;
 import android.net.Uri;
 
 public class VideoPlayer extends CordovaPlugin {
-    public static final String ACTION_ADD_CALENDAR_ENTRY = "addCalendarEntry";
+    public static final String ACTION_ADD_CALENDAR_ENTRY = "triggerVideoPlayer";
     
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
