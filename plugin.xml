@@ -26,16 +26,7 @@
             <feature name="Imagezoom">
                 <param name="android-package" value="com.fortsolution.playerplugin.Imagezoom"/>
             </feature>
-        </config-file>
-
-       <!--
-       
-                <config-file target="res/xml/config.xml" parent="/*">
-                   <feature name="Imagezoom">
-                       <param name="android-package" value="com.fortsolution.playerplugin.Imagezoom"/>
-                   </feature>
-               </config-file>-->
-       
+        </config-file>    
 
 	  <source-file src="src/android/VideoPlayer.java" target-dir="src/com/fortsolution/playerplugin" />
 	  <source-file src="src/android/Imagezoom.java" target-dir="src/com/fortsolution/playerplugin" />
