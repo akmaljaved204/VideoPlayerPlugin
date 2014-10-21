@@ -12,17 +12,19 @@ import android.net.Uri;
 
 public class VideoPlayer extends CordovaPlugin {
     public static final String ACTION_ADD_CALENDAR_ENTRY = "triggerVideoPlayer";
+	public static CallbackContext myCallback;
     
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         try {
             if (ACTION_ADD_CALENDAR_ENTRY.equals(action)) { 
                 JSONObject arg_object = args.getJSONObject(0);
-                Intent calIntent = new Intent(Intent.ACTION_VIEW);
-				String videoURL= arg_object.getString("videoCURL");
-				calIntent.setDataAndType(Uri.parse(videoURL), "video/*");             
-               this.cordova.getActivity().startActivity(calIntent);
-               callbackContext.success();
+				String videoURL= arg_object.getString("videoCURL");				
+				Intent intent = new Intent(this.cordova.getActivity(),VideoViewActivity.class);
+				intent.putExtra("videourl", videoURL);				
+               this.cordova.getActivity().startActivity(intent);
+			   myCallback=callbackContext;
+              // callbackContext.success();
                return true;
             }
             callbackContext.error("Invalid action");

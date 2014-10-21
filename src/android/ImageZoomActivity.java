@@ -5,9 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
 import com.fortsolution.madadd.R;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
