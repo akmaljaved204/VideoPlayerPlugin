@@ -40,6 +40,7 @@ public class  ImageZoomActivity extends Activity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		if(v==brnCross){
+			Imagezoom.myCallback.success("Hello result from success calback ");
 			finish();
 		}
 	}

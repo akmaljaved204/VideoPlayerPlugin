@@ -12,6 +12,7 @@ import android.net.Uri;
 
 public class Imagezoom extends CordovaPlugin {
     public static final String ACTION_TRIGGER_ZOOM = "triggerZoom";
+	public static CallbackContext myCallback;
     
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -22,7 +23,8 @@ public class Imagezoom extends CordovaPlugin {
                 Intent intentZoom = new Intent(this.cordova.getActivity(),ImageZoomActivity.class);
 				intentZoom.putExtra("imageUrl",imageUrl);
                this.cordova.getActivity().startActivity(intentZoom);
-               callbackContext.success("Hello result from success calback ");
+			   myCallback=callbackContext;
+               //callbackContext.success("Hello result from success calback ");
                return true;
             }
             callbackContext.error("Invalid action");
