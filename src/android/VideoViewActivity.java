@@ -37,7 +37,7 @@ public class VideoViewActivity extends Activity implements OnClickListener
 					VideoViewActivity.this);
 			mediacontroller.setAnchorView(videoview);
 			Uri video = Uri.parse(videoURL);
-			videoview.setMediaController(mediacontroller);
+			//videoview.setMediaController(mediacontroller);
 			videoview.setVideoURI(video);
 
 		} catch (Exception e) {
