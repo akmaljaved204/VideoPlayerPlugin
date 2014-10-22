@@ -4,7 +4,7 @@
            id="com.fortsolution.playerplugin"
       version="0.1.0">
     <name>VideoPlayer</name>
-    <description>Sample PhoneGap Calendar Plugin</description>
+    <description>Sample PhoneGap Video Player Plugin</description>
     <license>Fortsolution</license>
     <keywords>phonegap,video player</keywords>
 
