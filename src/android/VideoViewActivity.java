@@ -105,12 +105,12 @@ public class VideoViewActivity extends Activity implements OnClickListener
 	}
 	@Override
 	protected void onDestroy() {
-	    super.onDestroy();
 		if(isComplete){
 			VideoPlayer.myCallback.success("true");
 		}else{
 			VideoPlayer.myCallback.success("false");
 		}
+		super.onDestroy();
 	    
 	}
 }

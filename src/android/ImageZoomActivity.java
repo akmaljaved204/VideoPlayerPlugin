@@ -21,6 +21,7 @@ public class  ImageZoomActivity extends Activity implements OnClickListener{
 	private RelativeLayout imageLayout;
 	private Button brnCross;
 	private String imageURL="";
+	private boolean isComplete=false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,7 @@ public class  ImageZoomActivity extends Activity implements OnClickListener{
 	@Override
 	public void onClick(View v) {
 		if(v==brnCross){
-			Imagezoom.myCallback.success("Hello result from success calback ");
+			isComplete=true;
 			finish();
 		}
 	}
@@ -55,6 +56,7 @@ public class  ImageZoomActivity extends Activity implements OnClickListener{
 			            conn.setInstanceFollowRedirects(true);
 			            InputStream is=conn.getInputStream();
 			            final Bitmap bitmap =BitmapFactory.decodeStream(is);
+						isComplete=true;
 			            runOnUiThread(new Runnable() {			
 							@Override
 							public void run() {
@@ -71,6 +73,7 @@ public class  ImageZoomActivity extends Activity implements OnClickListener{
 				} catch (IOException e) {
 					hideLoading();
 					e.printStackTrace();
+					isComplete=false;
 			
 				}
 				
@@ -103,4 +106,14 @@ public class  ImageZoomActivity extends Activity implements OnClickListener{
 			}
 		});
 	}	
+	@Override
+	protected void onDestroy() {
+	   if(isComplete){
+			Imagezoom.myCallback.success("true");
+		}else{
+			Imagezoom.myCallback.success("false");
+		}
+		super.onDestroy();
+	    
+	}
 }
