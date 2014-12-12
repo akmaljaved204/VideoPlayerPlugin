@@ -12,7 +12,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
-import com.fortsolution.madadd.R;
+import com.fortsolution.kashkitty.R;
 
 public class VideoViewActivity extends Activity implements OnClickListener
 {
